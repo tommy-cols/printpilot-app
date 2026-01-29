@@ -14,7 +14,7 @@ function Login() {
   
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/dashboard');
+      navigate('/app');
     }
   }, [isAuthenticated, navigate]);
   
@@ -33,7 +33,7 @@ function Login() {
     const result = await login(email, password);
     
     if (result.success) {
-      navigate('/dashboard');
+      navigate('/app');
     } else {
       setError(result.error || 'Login failed. Please check your credentials.');
     }
