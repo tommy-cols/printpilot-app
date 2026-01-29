@@ -1,0 +1,6 @@
+[build]
+builder = "nixpacks"
+watchPatterns = ["landing/**"]
+
+[deploy]
+startCommand = "npx serve dist -s -l $PORT"
